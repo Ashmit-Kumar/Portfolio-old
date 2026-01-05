@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import './HeroSection.css';
@@ -7,12 +7,7 @@ import PulseBadge from './PulseBadge';
 import TechStack from './TechStack';
 
 const HeroSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const email = "ashmitkumar1020@gmail.com";
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const scrollToProjects = () => {
     const element = document.getElementById('projects');

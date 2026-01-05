@@ -54,7 +54,8 @@ const skillsData = [
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
       { name: 'Redis', icon: SiRedis, color: '#DC382D' },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
-      { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' }
+      { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
+      { name: 'Neon', icon: SiPostgresql, color: '#00E599' }
     ]
   },
   {
@@ -65,7 +66,8 @@ const skillsData = [
       { name: 'AWS', icon: SiAmazonwebservices, color: '#FF9900' },
       { name: 'Git', icon: SiGit, color: '#F05032' },
       { name: 'GitHub', icon: SiGithub, color: '#181717' },
-      { name: 'Jenkins', icon: SiJenkins, color: '#D24939' }
+      { name: 'Jenkins', icon: SiJenkins, color: '#D24939' },
+      { name: 'CI/CD', icon: SiJenkins, color: '#6366F1' }
     ]
   }
 ];

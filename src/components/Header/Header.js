@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMenu, FiX } from 'react-icons/fi';
 import './Header.css';
 
 const Header = () => {
