@@ -5,16 +5,48 @@ import './Header.css';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollTimeout, setScrollTimeout] = useState(null);
   const email = "ashmitkumar1020@gmail.com";
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Set scrolled state
+      setScrolled(currentScrollY > 50);
+      
+      // Hide navbar when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+
+      // Clear existing timeout
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+
+      // Show navbar after scrolling stops
+      const timeout = setTimeout(() => {
+        setHidden(false);
+      }, 150);
+      
+      setScrollTimeout(timeout);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, [lastScrollY, scrollTimeout]);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -27,7 +59,7 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav-wrapper" data-state={menuOpen ? 'active' : ''}>
-        <div className={`nav-container ${scrolled ? 'scrolled' : ''}`}>
+        <div className={`nav-container ${scrolled ? 'scrolled' : ''} ${hidden ? 'hidden' : ''}`}>
           <div className="nav-content">
             {/* Logo */}
             <div className="nav-logo-section">

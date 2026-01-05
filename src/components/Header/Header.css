@@ -20,6 +20,13 @@
   padding: 1rem 3rem;
   margin-top: 0.5rem;
   transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.nav-container.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nav-container.scrolled {
