@@ -62,26 +62,30 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="hero-buttons"
+          className="hero-buttons-container"
         >
-          <button
-            onClick={() => window.location.href = `mailto:${email}`}
-            className="btn btn-primary"
-          >
-            Contact Me <FiArrowRight className="btn-icon" />
-          </button>
-          <button
-            onClick={downloadResume}
-            className="btn btn-secondary"
-          >
-            Download Resume <FiDownload className="btn-icon" />
-          </button>
-          <button
-            onClick={scrollToProjects}
-            className="btn btn-secondary"
-          >
-            View Projects <FiArrowRight className="btn-icon" />
-          </button>
+          <div className="hero-buttons-row">
+            <button
+              onClick={() => window.location.href = `mailto:${email}`}
+              className="btn btn-primary"
+            >
+              Contact Me <FiArrowRight className="btn-icon" />
+            </button>
+            <button
+              onClick={scrollToProjects}
+              className="btn btn-secondary"
+            >
+              View Projects <FiArrowRight className="btn-icon" />
+            </button>
+          </div>
+          <div className="hero-buttons-row">
+            <button
+              onClick={downloadResume}
+              className="btn btn-secondary btn-resume"
+            >
+              Resume <FiDownload className="btn-icon" />
+            </button>
+          </div>
         </motion.div>
 
         {/* Tech Stack */}
