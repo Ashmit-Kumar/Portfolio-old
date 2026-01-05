@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiDownload } from 'react-icons/fi';
 import './HeroSection.css';
 import ShimmerText from './ShimmerText';
 import PulseBadge from './PulseBadge';
@@ -14,6 +14,13 @@ const HeroSection = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Ashmit_Resume.pdf';
+    link.download = 'Ashmit_Kumar_Resume.pdf';
+    link.click();
   };
 
   return (
@@ -62,6 +69,12 @@ const HeroSection = () => {
             className="btn btn-primary"
           >
             Contact Me <FiArrowRight className="btn-icon" />
+          </button>
+          <button
+            onClick={downloadResume}
+            className="btn btn-secondary"
+          >
+            Download Resume <FiDownload className="btn-icon" />
           </button>
           <button
             onClick={scrollToProjects}
