@@ -1,0 +1,285 @@
+.experience-section {
+  min-height: 80vh;
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+/* Section Title */
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.title-underline {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), #059669);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Experience Box */
+.experience-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(228, 228, 231, 0.5);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Corner Decorations */
+.corner-decoration {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: #e5e7eb;
+}
+
+.corner-decoration::after {
+  content: '+';
+  position: absolute;
+  color: #d4d4d8;
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+.corner-tl {
+  top: 7rem;
+  left: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  transform: translate(-1px, -1px);
+}
+
+.corner-tl::after {
+  top: -15px;
+  left: -6px;
+}
+
+.corner-tr {
+  top: 7rem;
+  right: 0;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  transform: translate(1px, -1px);
+}
+
+.corner-tr::after {
+  top: -15px;
+  right: -6.5px;
+}
+
+.corner-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: translate(-1.5px, 1.5px);
+}
+
+.corner-bl::after {
+  bottom: -14px;
+  left: -6px;
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  transform: translate(1.5px, 1.5px);
+}
+
+.corner-br::after {
+  bottom: -14px;
+  right: -6.5px;
+}
+
+/* Experience Item */
+.experience-item {
+  padding: 0;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.item-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.015em;
+}
+
+.item-detail {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #525252;
+  margin: 0;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.period-badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.location {
+  font-size: 0.875rem;
+  color: #71717a;
+}
+
+/* Achievements List */
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #404040;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.achievement-icon {
+  color: #10b981;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.position {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--foreground);
+  margin: 0.25rem 0;
+}
+
+.duration {
+  font-size: 0.875rem;
+  color: #71717a;
+  margin-bottom: 0.75rem;
+}
+
+/* Achievements List */
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #52525b;
+  font-weight: 300;
+}
+
+.list-icon {
+  min-width: 1rem;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.25rem;
+  color: #71717a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 3rem 0;
+  }
+
+  .experience-container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .experience-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .item-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .item-info {
+    align-items: flex-start;
+  }
+
+  .item-title {
+    font-size: 1.25rem;
+  }
+
+  .achievement-item {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .experience-box {
+    padding: 1.25rem 0.875rem;
+  }
+
+  .item-title {
+    font-size: 1.125rem;
+  }
+}

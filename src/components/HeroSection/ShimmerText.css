@@ -1,0 +1,53 @@
+.shimmer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 0.5rem;
+}
+
+.shimmer-container {
+  position: relative;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.shimmer-text {
+  font-size: clamp(2.5rem, 8vw, 5.25rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    #0a0a0a 0%,
+    #737373 25%,
+    #0a0a0a 50%,
+    #737373 75%,
+    #0a0a0a 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+  letter-spacing: -0.02em;
+  max-width: 64rem;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@media (max-width: 768px) {
+  .shimmer-wrapper {
+    padding: 1.5rem 0 0.25rem;
+  }
+  
+  .shimmer-text {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+}
