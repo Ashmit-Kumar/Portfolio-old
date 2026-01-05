@@ -20,7 +20,8 @@ import {
   SiGit,
   SiGithub,
   SiJenkins,
-  SiGraphql
+  SiSupabase,
+  SiRabbitmq
 } from 'react-icons/si';
 import './Skills.css';
 
@@ -42,7 +43,8 @@ const skillsData = [
       { name: 'Express', icon: SiExpress, color: '#000000' },
       { name: 'Go', icon: SiGo, color: '#00ADD8' },
       { name: 'Python', icon: SiPython, color: '#3776AB' },
-      { name: 'GraphQL', icon: SiGraphql, color: '#E10098' }
+      { name: 'NSQ', icon: SiNodedotjs, color: '#00BCD4' },
+      { name: 'RabbitMQ', icon: SiRabbitmq, color: '#FF6600' }
     ]
   },
   {
@@ -51,7 +53,8 @@ const skillsData = [
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
       { name: 'Redis', icon: SiRedis, color: '#DC382D' },
-      { name: 'MySQL', icon: SiMysql, color: '#4479A1' }
+      { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
+      { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' }
     ]
   },
   {
