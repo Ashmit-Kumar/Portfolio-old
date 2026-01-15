@@ -5,6 +5,18 @@ import ProjectCard from './ProjectCard';
 
 const projectsData = [
   {
+    title: 'AssessAI',
+    description: 'AI-powered interview practice platform that runs live voice interviews with an AI interviewer, captures transcripts and code edits, and generates structured evaluations.',
+    technologies: ['Next.js', 'Express', 'TypeScript', 'Python', 'Redis', 'LiveKit'],
+    highlights: [
+      'Run live voice interviews with an AI interviewer',
+      'Capture transcripts and candidate code edits during interviews',
+      'Generate structured evaluations and a 5-stage interview pipeline; reduced feedback turnaround by over 50%'
+    ],
+    github: 'https://github.com/Ashmit-Kumar/Interviewer-agent',
+    period: 'Dec 2025 – Jan 2026'
+  },
+  {
     title: 'AutoShip',
     description: 'A Go-based CI/CD system to automate GitHub repo deployments with DNS proxy and containerized deployments.',
     technologies: ['Go', 'Fiber', 'MongoDB', 'Docker', 'AWS', 'GitHub OAuth'],
@@ -30,16 +42,15 @@ const projectsData = [
     period: 'Jan 2025 - Mar 2025'
   },
   {
-    title: 'TastySearch',
-    description: 'A recipe discovery web application that allows users to search for recipes, view ingredients, and find detailed cooking instructions.',
-    technologies: ['React', 'CSS', 'JavaScript', 'API Integration'],
+    title: 'Medicure',
+    description: 'Web application for X-ray medical report analysis. Users upload X-ray images which are analyzed by a deployed deep learning backend to provide predictions and insights.',
+    technologies: ['React', 'Flask', 'TensorFlow/Keras', 'Python', 'Vercel'],
     highlights: [
-      'Interactive recipe search functionality',
-      'Detailed ingredient listings',
-      'Step-by-step cooking instructions'
+      'Upload X-ray images for automated medical analysis',
+      'Integrated pre-trained .h5 CNN model exposed via backend API',
+      'Deployed frontend and backend live for real-time predictions'
     ],
-    github: 'https://github.com/Ashmit-Kumar',
-    live: 'https://tastysearch.vercel.app',
+    github: 'https://github.com/Ashmit-Kumar/Medicure',
     period: '2024'
   }
 ];
