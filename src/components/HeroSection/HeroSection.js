@@ -50,10 +50,10 @@ const HeroSection = () => {
           className="hero-description"
         >
           <p className="description-line">
-            I'm currently 4th year undergrad at PSIT, Kanpur.
+            I'm currently a fourth-year undergraduate student at PSIT, Kanpur.
           </p>
           <p className="description-line">
-            I have expertise in building scalable, cloud-native systems and high-performance backends!
+            I specialize in building scalable, cloud-native systems and high-performance backends.
           </p>
         </motion.div>
 
